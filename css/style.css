@@ -1,0 +1,291 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b111e;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  height: 23px;
+  background: #0b111e;
+  border-bottom: 1px solid #719878;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+
+header a {
+  font-size: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+.top-space {
+  height: 30px;
+}
+
+/* SININE ÜLEMINE OSA */
+
+.hero {
+  height: 142px;
+  background: #304c7f;
+}
+
+.hero-content {
+  margin-left: 6%;
+  padding-top: 20px;
+}
+
+.hero h1 {
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.hero h1 span {
+  color: #87aa85;
+}
+
+.hero p {
+  font-size: 6.5px;
+  line-height: 1.2;
+  max-width: 250px;
+  margin: 0 0 11px;
+}
+
+.btn {
+  display: inline-block;
+  background: #719878;
+  padding: 5px 7px;
+  font-size: 7px;
+  text-decoration: none;
+  color: white;
+}
+
+/* ROBOTITE KAARDID */
+
+.threats {
+  height: 278px;
+  background: #0b111e;
+  padding-top: 30px;
+}
+
+.content {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.threats h2 {
+  font-size: 8px;
+  font-weight: normal;
+  line-height: 1.15;
+  margin: 0 0 9px;
+}
+
+.intro {
+  font-size: 6.5px;
+  line-height: 1.15;
+  max-width: 350px;
+  margin: 0 0 9px;
+}
+
+.threat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 0 10px;
+}
+
+.threat-card {
+  background: #304c7f;
+  min-width: 0;
+  height: 167px;
+  overflow: hidden;
+}
+
+.threat-card img {
+  display: block;
+  width: 100%;
+  height: 102px;
+  object-fit: cover;
+}
+
+.threat-text {
+  padding: 9px 9px 5px;
+}
+
+.threat-text h3 {
+  font-size: 8px;
+  font-weight: normal;
+  text-decoration: underline;
+  margin: 0 0 3px;
+}
+
+.threat-text p {
+  font-size: 6px;
+  line-height: 1.15;
+  margin: 0 0 3px;
+}
+
+.threat-text a {
+  color: #91b38c;
+  text-decoration: none;
+  font-size: 6px;
+}
+
+/* ROHELINE ETTEVALMISTUS */
+
+.preparation {
+  height: 153px;
+  background: #739b7b;
+  padding-top: 20px;
+}
+
+.preparation h2 {
+  font-size: 11px;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.preparation-intro {
+  font-size: 6.5px;
+  margin: 0 0 11px;
+}
+
+.prep-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 23px;
+  margin: 0 9px;
+}
+
+.prep-card {
+  background: #0b111e;
+  height: 71px;
+  padding: 10px 13px;
+  overflow: hidden;
+}
+
+.prep-card h3 {
+  font-size: 7px;
+  font-weight: normal;
+  text-decoration: underline;
+  margin: 0 0 5px;
+}
+
+.prep-card p {
+  font-size: 6px;
+  line-height: 1.1;
+  margin: 0 0 5px;
+}
+
+.prep-card a {
+  background: #719878;
+  color: white;
+  text-decoration: none;
+  font-size: 5.5px;
+  padding: 3px 4px;
+  display: inline-block;
+}
+
+/* ALUMINE OSA */
+
+.bottom {
+  height: 152px;
+  background: #0b111e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-content {
+  width: 285px;
+}
+
+.bottom h2 {
+  font-size: 8px;
+  font-weight: normal;
+  margin: 0 0 7px;
+}
+
+.bottom p {
+  font-size: 6px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.bottom .btn {
+  margin: 0;
+}
+
+/* SUUREMATE EKRAANIDE JAOKS */
+
+@media (min-width: 900px) {
+  body {
+    zoom: 1.35;
+  }
+}
+
+/* MOBIIL */
+
+@media (max-width: 550px) {
+  .hero {
+    height: auto;
+    min-height: 180px;
+    padding-bottom: 20px;
+  }
+
+  .threats {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .threat-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .threat-card {
+    height: auto;
+    min-height: 190px;
+  }
+
+  .preparation {
+    height: auto;
+    padding-bottom: 25px;
+  }
+
+  .prep-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .prep-card {
+    height: 100px;
+  }
+
+  .bottom {
+    padding: 25px;
+  }
+}
