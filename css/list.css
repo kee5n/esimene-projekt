@@ -1,0 +1,111 @@
+body {
+  max-width: 640px;
+  margin: 30px auto;
+  padding: 24px;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+
+.list, p {
+  color: white;
+  list-style: none;
+}
+
+.list {
+  width: 80%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 20px;
+  padding-left: 20px;
+  text-align: left;
+  background: #0c0c0c;
+  border: 1px solid #0f0f0f;
+  border-radius: 40px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 45px;
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: #709775;
+}
+
+.list li {
+  margin: 25px 0;
+}
+
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
+label:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 1.75px solid white;
+  border-radius: 8.5px;  
+  background: transparent;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8 3 3 7-7' fill='none' stroke='%23709975' stroke-width='2.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+}
+
+.progress-container {
+  position: relative;
+  width: 80%;
+  margin: 16px auto 28px;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  height: 32px;
+  appearance: none;
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+  overflow: hidden;
+  background-color: #202020;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #202020;
+}
+
+progress::-webkit-progress-value {
+  background-color: #709775;
+  transition: width 0.25s ease;
+}
+
+progress::-moz-progress-bar {
+  background-color: #709775;
+}
+
+.progress-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  pointer-events: none;
+}
