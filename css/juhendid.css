@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f1f3f7;
+  background: #0a1221;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #09111f 0%, #142545 23%, #2d4d85 56%, #12213b 88%, #09111f 100%);
+}
+
+.page {
+  width: min(100% - 116px, 924px);
+  margin: 0 auto;
+  padding: 126px 0 196px;
+}
+
+.intro {
+  margin-bottom: 104px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.3px;
+}
+
+.intro p {
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.guides h2 {
+  margin: 0 0 29px;
+  padding-left: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.guide-card {
+  margin-bottom: 28px;
+  padding: 16px 29px 14px;
+  border-radius: 6px;
+  background: #080f1d;
+}
+
+.guide-card h3 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.question {
+  margin-top: 23px;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+hr {
+  height: 1px;
+  margin: 20px 0 20px;
+  border: 0;
+  background: rgba(235, 239, 247, 0.85);
+}
+
+ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11px;
+  line-height: 1.78;
+}
+
+.cta {
+  margin-top: 57px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.cta p + p {
+  margin-top: 13px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 8px 11px;
+  border-radius: 3px;
+  color: #f3f7f3;
+  background: #6ea17d;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #83b592;
+}
+
+@media (max-width: 700px) {
+  .page {
+    width: min(100% - 40px, 924px);
+    padding: 64px 0 100px;
+  }
+
+  .intro {
+    margin-bottom: 70px;
+  }
+
+  .intro p br {
+    display: none;
+  }
+
+  .guide-card {
+    padding: 16px 20px 14px;
+  }
+
+  .question {
+    margin-top: 18px;
+  }
+}
