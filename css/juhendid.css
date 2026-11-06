@@ -18,7 +18,10 @@ body {
   color: var(--text);
 }
 
-header {
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   min-height: 64px;
   padding: 0 clamp(24px, 6vw, 96px);
   display: flex;
@@ -28,13 +31,13 @@ header {
   border-bottom: 1px solid rgba(113, 152, 120, 0.7);
 }
 
-header a {
+.top a {
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
 }
 
-header nav {
+.top nav {
   display: flex;
   gap: clamp(18px, 3vw, 40px);
 }

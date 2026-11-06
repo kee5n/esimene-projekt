@@ -1,18 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a1221;
+  --green: #6f9a76;
+}
+
+html {
+  scroll-padding-top: 49px;
+}
+
 body {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #000000;
+  margin: 0;
+  background-color: var(--bg);
   font-family: "Inter", sans-serif;
 }
 
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ---------- Navigatsioon ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  padding: 0 54px;
+  background: var(--bg);
+  border-bottom: 3px solid var(--green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  gap: 11px;
+}
+
+/* ---------- Kalkulaator ---------- */
 p, label {
   color: white;
 }
+
 h1 {
   color: white;
   text-align: center;
 }
+
 h2 {
   color: white;
 }
@@ -59,16 +110,16 @@ h2 {
   display: none;
 }
 
-  input[type="number"] {
-    font-size: 20px;
-    padding: 10px;
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    appearance: textfield;
-    -moz-appearance: textfield;
-  }
+input[type="number"] {
+  font-size: 20px;
+  padding: 10px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -95,4 +146,11 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+/* ---------- Mobiil ---------- */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 20px;
+  }
 }

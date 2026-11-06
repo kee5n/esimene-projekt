@@ -9,6 +9,16 @@
 </head>
 
 <body>
+
+    <nav class="navbar" aria-label="Peamenüü">
+        <a href="index.html">Turvaline tulevik</a>
+        <div class="nav-right">
+            <a href="juhendid.html">Juhend</a>
+            <a href="info.html">Info</a>
+        </div>
+    </nav>
+
+    <main>
         <h1>Arvuta kui palju vett ja toitu läheb vaja kriisiolukorras</h1>
 
         <div class="input-container">
@@ -29,7 +39,8 @@
             <p id="result"></p>
             <p id="info"></p>
         </section>
-
+        
+    </main>
         <script>
         function calculate() {
             const adults = Number(document.getElementById("taiskasvanud").value);
