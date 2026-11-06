@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #0a1221;
+  --blue: #2c4a82;
+  --blue-dark: #223a68;
+  --green: #6f9a76;
+  --green-hover: #83b592;
+  --text: #ffffff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  min-height: 64px;
+  padding: 0 clamp(24px, 6vw, 96px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0b111e;
+  border-bottom: 1px solid rgba(113, 152, 120, 0.7);
+}
+
+header a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  gap: clamp(18px, 3vw, 40px);
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ---------- Navigatsioon ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  padding: 0 54px;
+  border-bottom: 3px solid var(--green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  gap: 11px;
+}
+
+/* ---------- Sissejuhatus ---------- */
+.intro {
+  margin-top: 65px;
+  background: var(--blue);
+}
+
+.intro-inner {
+  padding: 29px 60px 30px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.intro p {
+  max-width: 640px;
+  margin-top: 19px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+/* ---------- Varude nimekiri ---------- */
+.supplies {
+  margin-top: 64px;
+}
+
+.section-bar {
+  display: flex;
+  align-items: center;
+  height: 69px;
+  padding: 0 40px;
+  background: var(--green);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.group {
+  margin: 40px 50px 0;
+}
+
+.group h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.group-intro {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.supply-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: var(--blue);
+}
+
+.supply-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: var(--blue-dark);
+}
+
+.supply-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 14px 4px 2px;
+}
+
+.supply-body h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.desc {
+  flex: 1;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.amount {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 2px solid var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.unit {
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+/* ---------- Veekalkulaator ---------- */
+.calculator {
+  margin: 64px 50px 0;
+  background: var(--blue);
+}
+
+.calc-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+}
+
+.calc-form {
+  padding: 28px 50px 30px;
+}
+
+.calc-form h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.calc-form p {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.fields {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fields input {
+  width: 120px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.calc-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 40px;
+  border-left: 2px solid var(--text);
+}
+
+.result-label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.result-value {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--green);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--green-hover);
+}
+
+/* ---------- Jalus ---------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 49px;
+  margin-top: 64px;
+  padding: 0 54px;
+  border-top: 3px solid var(--green);
+  font-size: 12px;
+}
+
+.footer strong {
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  gap: 11px;
+  font-weight: 700;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Tahvelarvuti ---------- */
+@media (max-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calc-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-result {
+    border-top: 2px solid var(--text);
+    border-left: 0;
+    padding: 24px 50px;
+  }
+}
+
+/* ---------- Mobiil ---------- */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .intro {
+    margin-top: 32px;
+  }
+
+  .intro-inner {
+    padding: 28px 20px;
+  }
+
+  .supplies {
+    margin-top: 32px;
+  }
+
+  .section-bar {
+    height: 56px;
+    padding: 0 20px;
+  }
+
+  .group {
+    margin: 32px 16px 0;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator {
+    margin: 40px 16px 0;
+  }
+
+  .calc-form {
+    padding: 24px 20px;
+  }
+
+  .calc-result {
+    padding: 20px;
+  }
+
+  .fields {
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 20px;
+  }
+}
