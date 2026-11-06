@@ -4,133 +4,218 @@
 
 :root {
   color-scheme: dark;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #f1f3f7;
-  background: #0a1221;
+  --bg: #0a1221;
+  --blue: #2c4a82;
+  --green: #6f9a76;
+  --green-hover: #83b592;
+  --text: #ffffff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #09111f 0%, #142545 23%, #2d4d85 56%, #12213b 88%, #09111f 100%);
+  background: var(--bg);
+  color: var(--text);
 }
 
-.page {
-  width: min(100% - 116px, 924px);
-  margin: 0 auto;
-  padding: 126px 0 196px;
+header {
+  min-height: 64px;
+  padding: 0 clamp(24px, 6vw, 96px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0b111e;
+  border-bottom: 1px solid rgba(113, 152, 120, 0.7);
 }
 
-.intro {
-  margin-bottom: 104px;
+header a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-p {
+header nav {
+  display: flex;
+  gap: clamp(18px, 3vw, 40px);
+}
+
+h1, h2, h3, p {
   margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ---------- Navigatsioon ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 49px;
+  padding: 0 54px;
+  border-bottom: 3px solid var(--green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  gap: 11px;
+}
+
+/* ---------- Sissejuhatus ---------- */
+.intro {
+  margin-top: 65px;
+  background: var(--blue);
+}
+
+.intro-inner {
+  padding: 29px 60px 30px;
 }
 
 h1 {
   font-size: 24px;
-  font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -0.3px;
+  font-weight: 700;
+  line-height: 30px;
 }
 
 .intro p {
-  margin-top: 15px;
-  font-size: 12px;
-  line-height: 1.2;
+  margin-top: 19px;
+  font-size: 13px;
+  line-height: 17px;
 }
 
-.guides h2 {
-  margin: 0 0 29px;
-  padding-left: 0;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.2;
+/* ---------- Juhendid ---------- */
+.guides {
+  margin-top: 64px;
+}
+
+.section-bar {
+  display: flex;
+  align-items: center;
+  height: 69px;
+  padding: 0 40px;
+  background: var(--green);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.guide-list {
+  display: grid;
+  gap: 20px;
+  margin: 20px 50px 0;
 }
 
 .guide-card {
-  margin-bottom: 28px;
-  padding: 16px 29px 14px;
-  border-radius: 6px;
-  background: #080f1d;
+  padding: 14px 50px 14px;
+  background: var(--blue);
 }
 
 .guide-card h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 19px;
 }
 
 .question {
-  margin-top: 23px;
-  font-size: 11px;
-  line-height: 1.3;
+  margin-top: 11px;
+  font-size: 13px;
+  line-height: 17px;
 }
 
 hr {
-  height: 1px;
-  margin: 20px 0 20px;
+  height: 2px;
+  margin: 14px 0 10px;
   border: 0;
-  background: rgba(235, 239, 247, 0.85);
+  background: var(--text);
 }
 
 ul {
   margin: 0;
-  padding-left: 16px;
-  font-size: 11px;
-  line-height: 1.78;
+  padding-left: 21px;
+  font-size: 13px;
+  line-height: 17px;
 }
 
+/* ---------- Kriisiplaani üleskutse ---------- */
 .cta {
-  margin-top: 57px;
+  margin-top: 64px;
+  padding: 0 20px 96px;
   text-align: center;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
 .cta p + p {
-  margin-top: 13px;
+  margin-top: 10px;
 }
 
 .button {
   display: inline-block;
-  margin-top: 13px;
-  padding: 8px 11px;
+  margin-top: 18px;
+  padding: 10px 16px;
   border-radius: 3px;
-  color: #f3f7f3;
-  background: #6ea17d;
-  font-size: 11px;
+  background: var(--green);
+  color: var(--text);
+  font-size: 13px;
   text-decoration: none;
 }
 
 .button:hover,
 .button:focus-visible {
-  background: #83b592;
+  background: var(--green-hover);
 }
 
+/* ---------- Mobiil ---------- */
 @media (max-width: 700px) {
-  .page {
-    width: min(100% - 40px, 924px);
-    padding: 64px 0 100px;
+  .navbar {
+    padding: 0 20px;
   }
 
   .intro {
-    margin-bottom: 70px;
+    margin-top: 32px;
+  }
+
+  .intro-inner {
+    padding: 28px 20px;
   }
 
   .intro p br {
     display: none;
   }
 
-  .guide-card {
-    padding: 16px 20px 14px;
+  .guides {
+    margin-top: 32px;
   }
 
-  .question {
-    margin-top: 18px;
+  .section-bar {
+    height: 56px;
+    padding: 0 20px;
+  }
+
+  .guide-list {
+    margin: 16px 16px 0;
+  }
+
+  .guide-card {
+    padding: 14px 20px 16px;
+  }
+
+  ul {
+    line-height: 1.5;
   }
 }
