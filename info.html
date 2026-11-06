@@ -15,6 +15,8 @@
     <nav>
       <a href="juhendid.html">Juhend</a>
       <a href="info.html">Info</a>
+      <a href="kalkulaator.html">Kalkulaator</a>
+      <a href="list.html">List</a>
     </nav>
   </header>
 
@@ -200,27 +202,6 @@
       </section>
     </section>
 
-    <section class="calculator" aria-labelledby="calc-title">
-      <div class="calc-inner">
-        <div class="calc-form">
-          <h2 id="calc-title">Kui palju vett sinu pere vajab?</h2>
-          <p>Arvuta välja joogivee kogus vastavalt pereliikmete arvule ja päevadele.</p>
-          <div class="fields">
-            <label>Inimeste arv
-              <input id="people" type="number" min="1" value="2" inputmode="numeric">
-            </label>
-            <label>Päevade arv
-              <input id="days" type="number" min="1" value="7" inputmode="numeric">
-            </label>
-          </div>
-          <button type="button" id="calc-btn" class="button">Arvuta vajalik kogus</button>
-        </div>
-        <div class="calc-result" aria-live="polite">
-          <p class="result-label">Vajalik joogivee kogus</p>
-          <p class="result-value"><span id="result">42</span> L</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -231,23 +212,5 @@
       <a href="info.html">Info</a>
     </nav>
   </footer>
-
-  <script>
-    const LITERS_PER_PERSON_PER_DAY = 3;
-    const people = document.getElementById('people');
-    const days = document.getElementById('days');
-    const result = document.getElementById('result');
-
-    function calculate() {
-      const p = Math.max(0, parseInt(people.value, 10) || 0);
-      const d = Math.max(0, parseInt(days.value, 10) || 0);
-      result.textContent = p * d * LITERS_PER_PERSON_PER_DAY;
-    }
-
-    document.getElementById('calc-btn').addEventListener('click', calculate);
-    [people, days].forEach(el => el.addEventListener('keydown', e => {
-      if (e.key === 'Enter') calculate();
-    }));
-  </script>
 </body>
 </html>
