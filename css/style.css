@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  color-scheme: dark;
+  --bg: #0a1221;
+  --blue: #2c4a82;
+  --green: #6f9a76;
+  --green-hover: #83b592;
+  --text: #ffffff;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -225,6 +235,46 @@ header nav {
 .bottom h2 { font-size: clamp(2rem, 3.5vw, 3.5rem); }
 
 .bottom p { margin: 0 auto 28px; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 49px;
+  margin-top: 64px;
+  padding: 0 54px;
+  border-top: 3px solid var(--green);
+  font-size: 12px;
+}
+
+.footer strong {
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  gap: 11px;
+  font-weight: 700;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* mobiil: pane see @media (max-width: 700px) sisse */
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 20px;
+  }
+}
 
 @media (max-width: 900px) {
   .threat-grid,
