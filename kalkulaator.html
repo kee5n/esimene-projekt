@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toidu ja vee kalkulaator</title>
+    <link rel="stylesheet" href="css/kalkulaator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <h1>Arvuta kui palju vett ja toitu läheb vaja kriisiolukorras</h1>
+
+        <div class="input-container">
+            <label for="taiskasvanud">Täiskasvanute arv:</label><br>
+            <input type="number" id="taiskasvanud" name="taiskasvanud" min="0" value="1">
+            <br><br>
+            <label for="lapsed">Laste (1-12 aastat vanad) arv:</label><br>
+            <input type="number" id="lapsed" name="lapsed" min="0" value="1">
+            <br><br>
+            <label for="paevad">Päevade arv:</label><br>
+            <input type="number" id="paevad" name="paevad" min="1" value="1">
+            <br><br>
+        </div>
+
+        <button onclick="calculate()">Arvuta</button>
+        <section class="result-card" aria-live="polite">
+            <h2>Tulemus</h2>
+            <p id="result"></p>
+            <p id="info"></p>
+        </section>
+
+        <script>
+        function calculate() {
+            const adults = Number(document.getElementById("taiskasvanud").value);
+            const children = Number(document.getElementById("lapsed").value);
+            const days = Number(document.getElementById("paevad").value);
+
+
+            const food = Math.round((adults * 0.7 + children * 0.45) * days);
+            const water = Math.round((adults * 3 + children * 3) * days);
+
+            document.getElementById("result").textContent =
+                `Vajalik toidukogus on umbes ${food} kg ja veekogus ${water} liitrit.`;
+            document.getElementById("info").textContent =
+        `Arvestuse aluseks on täiskasvanu päevane toidukogus 0,7 kg ja lapse oma 0,45 kg. ` +
+        `Vett arvestatakse iga inimese kohta 3 liitrit päevas.\n` +
+        `Tegelik vajadus võib olenevalt olukorrast erineda.`;
+        }
+
+        document.querySelectorAll('input[type="number"]').forEach((input) => {
+            input.addEventListener("input", () => {
+            document.getElementById("result").textContent = "";
+            document.getElementById("info").textContent = "";
+        });
+    });
+</script>
+
+
+</body>
+</html>

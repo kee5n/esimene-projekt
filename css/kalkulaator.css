@@ -1,0 +1,98 @@
+body {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+
+p, label {
+  color: white;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+h2 {
+  color: white;
+}
+
+.result-card {
+  max-width: 620px;
+  margin: 32px auto;
+  padding: 24px 28px;
+  background: #000000;
+  border: 2px solid #787878;
+  border-radius: 20px;
+}
+
+.result-card h2 {
+  margin: 0 0 16px;
+  color: #709775;
+  text-align: center;
+}
+
+.result-card #result {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.result-card #info {
+  margin: 16px 0 0;
+  padding-top: 16px;
+  color: #d2ddd3;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.result-card #info:empty,
+.result-card #result:empty {
+  display: none;
+}
+
+.result-card:has(#result:empty) {
+  display: none;
+}
+
+  input[type="number"] {
+    font-size: 20px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.input-container input {
+  display: block;
+  margin: 8px auto 0;
+}
+
+button {
+  display: block;
+  margin: 24px auto;
+  padding: 14px 32px;
+  font-size: 20px;
+  color: white;
+  background-color: #709775;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
